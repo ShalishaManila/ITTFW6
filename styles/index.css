@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+main{
+    background-image: url(../images/frosting.jpg);
+    height: 100vh;
+    background-color: #4a3726;
+    background-repeat:no-repeat;
+    background-position:center;
+    align-content: center;
+}
+
+header {
+    height: 10vh;
+    border-bottom: 1px solid #000000;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    margin-left: 20px;
+    font-size: 40px;
+    font-family: 'Poppins';
+    color: #6a4f47;
+}
+
+.nav {
+    min-width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-list {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.nav-link {
+    color: #ff9101;;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #6a4f47;;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.baking-card {
+    width: 300px;
+    background: #000000;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 3s forwards;
+}
+
+.card-image {
+    width: 70%;
+    padding-top: 10px;
+    border-radius: 20px;
+    animation: cardimageZoom 3s ease infinite;
+}
+
+.card-title {
+    font-size: 24px;
+    color: #6a4f47;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #8c7b74;
+    margin: 10px 20px;
+}
+
+.card-button {
+    background-color: #f39c12;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+.card-button:hover {
+    background-color: #522601;
+}
+
+/* Fade-in animation for card */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardimageZoom {
+	0% {transform: scale(1) rotate(0deg);}
+	25% {transform: scale(1.1) rotate(15deg);}
+	50% {transform: scale(1) rotate(0deg);}
+    75% {transform: scale(1.1) rotate(-15deg);}
+    100% {transform: scale(1) rotate(0deg);}
+}
